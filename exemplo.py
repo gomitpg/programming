@@ -20,8 +20,8 @@ def main():
             # Species -> y.target
     X = data.data
     y = data.target
-    k = 5 # define o k aqui em vez de ser na chamada da função, assim altera logo nos visuais gerados
-    metric = 'manhattan'
+    k = 100 # define o k aqui em vez de ser na chamada da função, assim altera logo nos visuais gerados
+    metric = 'euclidean'
     normalize_data = 'standardize'
 
     # Correr o algoritmo:

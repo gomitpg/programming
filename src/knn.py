@@ -2,7 +2,7 @@ import numpy as np
 from src.distance import distance
 from src.scaler import scaler
 
-def knn_predict(X_train, y_train, X_test, k=3, metric = 'euclidian', normalize_data=False):
+def knn_predict(X_train, y_train, X_test, k=3, metric = 'euclidean', normalize_data=False):
     """
     Metodo de classificacao supervisionada K nearest neighbors
     
