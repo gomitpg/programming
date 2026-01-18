@@ -2,14 +2,16 @@ import numpy as np
 from src.distance import distance
 from src.scaler import scaler
 
-def knn_predict(X_train, y_train, X_test, k=3, normalize_data=False):
+def knn_predict(X_train, y_train, X_test, k=3, metric = 'euclidian', normalize_data=False):
     """
     Metodo de classificacao supervisionada K nearest neighbors
     
-    :param X_train: vetor n-dimensional com os dados de treino X
-    :param y_train: vetor n-dimensional com os dados de treino y
-    :param X_test: vetor n-dimensional com os dados de teste X
-    :param k: numero de neighbors a considerar
+    Parâmetros:
+    X_train: vetor n-dimensional com os dados de treino X
+    y_train: vetor n-dimensional com os dados de treino y
+    X_test: vetor n-dimensional com os dados de teste X
+    k: numero de neighbors a considerar
+    metric: euclidian, manhattan
     :param normalize_data: standardize, minmax
     """
 
@@ -30,7 +32,7 @@ def knn_predict(X_train, y_train, X_test, k=3, normalize_data=False):
             x_train = X_train[i]
             y_label = y_train[i]
 
-            dist = distance(x_test, x_train)
+            dist = distance(x_test, x_train, metric = metric) # chama a funcao dist, passando o parâmetro metric
             distances.append((dist, y_label))
 
         distances.sort(key=lambda x: x[0])
