@@ -1,7 +1,17 @@
 import numpy as np
-from src import scaler, distance
+from src.distance import distance
+from src.scaler import scaler
 
 def knn_predict(X_train, y_train, X_test, k=3, normalize_data=False):
+    """
+    Metodo de classificacao supervisionada K nearest neighbors
+    
+    :param X_train: vetor n-dimensional com os dados de treino X
+    :param y_train: vetor n-dimensional com os dados de treino y
+    :param X_test: vetor n-dimensional com os dados de teste X
+    :param k: numero de neighbors a considerar
+    :param normalize_data: standardize, minmax
+    """
 
     if normalize_data == 'standardize':
         X_train = scaler(X_train, method='standardize')
