@@ -1,3 +1,4 @@
+import numpy as np
 def distance(v1, v2, metric = 'euclidian'):
     """
     Computa a distância entre dois pontos num espaço N-dimensional.
@@ -22,7 +23,4 @@ def distance(v1, v2, metric = 'euclidian'):
             return dist_manhattan
         else: 
             raise ValueError(f"Unknown metric: {metric}. Please choose one of the available metrics")
-    
-
-    
-    
+        
