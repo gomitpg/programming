@@ -23,5 +23,5 @@ def distance(v1, v2, metric = 'euclidean'):
             dist_manhattan = np.sum(np.abs(v1 - v2))
             return dist_manhattan
         else: 
-            raise ValueError(f"Unknown metric: {metric}. Please choose one of the available metrics")
+            raise ValueError(f"Métrica de distância desconhecida: {metric}. Escolhe por favor uma das opções")
         

@@ -8,7 +8,7 @@ def scaler(vetor,method='standardize'):
  
     Devolve:
         numpy.ndarray
-        Vetor normalizada.
+        Vetor normalizado
     """
      
     if method == 'standardize':
@@ -28,4 +28,4 @@ def scaler(vetor,method='standardize'):
         return (vetor - vetor_min) / (vetor_max - vetor_min)
     
     else:
-        raise ValueError('Choose one of the available methods (standardize or minmax)')
+        raise ValueError('Escolhe um dos scalers disponíveis (standardize ou minmax)')

@@ -12,7 +12,7 @@ def knn_predict(X_train, y_train, X_test, k=3, metric = 'euclidean', normalize_d
     X_test: vetor n-dimensional com os dados de teste X
     k: numero de neighbors a considerar
     metric: euclidian, manhattan
-    :param normalize_data: standardize, minmax
+    normalize_data: standardize, minmax
     """
 
     if normalize_data == 'standardize':
